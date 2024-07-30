@@ -1,0 +1,110 @@
+/* src/FlightResults.css */
+.box {
+    background-color: #000; /* Black background for the box */
+    color: #FF004F; /* Text color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 600px; /* Increased width of the result box */
+    position: relative; /* Position relative for the overlay */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap between buttons */
+    margin-top: 20px;
+  }
+  
+  .notify-button, .search-button {
+    background-color: #FF004F;
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded */
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to buttons */
+  }
+  
+  .notify-button:hover, .search-button:hover {
+    background-color: #e60047;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  }
+  
+  .popup {
+    background-color: #444; /* Dark background for the popup */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Position fixed for centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popin 0.5s forwards; /* Animation for the popup */
+    z-index: 1000; /* Ensure popup is above other elements */
+    width: 90%; /* Responsive width for popup */
+    max-width: 400px; /* Maximum width for popup */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items inside the popup */
+  }
+  
+  @keyframes popin {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between input fields and button */
+    width: 100%; /* Full width of popup */
+  }
+  
+  .popup input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%; /* Full width for inputs */
+    max-width: 300px; /* Limit the maximum width */
+    font-size: 16px;
+    outline: none;
+    background-color: #555;
+    color: #FFF;
+  }
+  
+  .popup button {
+    background-color: #FF004F;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px; /* Larger padding for better appearance */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to button */
+  }
+  
+  .popup button:hover {
+    background-color: #e60047;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  }
+  
+  .error {
+    color: #FF004F;
+    margin-top: 10px;
+  }
+  

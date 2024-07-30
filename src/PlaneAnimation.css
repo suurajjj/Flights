@@ -1,0 +1,32 @@
+.plane-animation {
+    position: fixed;
+    top: 0;
+    left: -100px; /* Start position off-screen */
+    width: 100%;
+    height: 100px; /* Height of the animation area */
+    overflow: hidden;
+    pointer-events: none; /* Ensure clicks pass through */
+    z-index: 1000; /* High z-index to ensure it's on top */
+  }
+  
+  .plane-animation.visible {
+    display: block;
+  }
+  
+  .plane {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    animation: fly 1s linear forwards; /* Adjust animation duration as needed */
+  }
+  
+  @keyframes fly {
+    from {
+      left: -100px; /* Start off-screen */
+    }
+    to {
+      left: 100%; /* Move across the screen */
+    }
+  }
+  

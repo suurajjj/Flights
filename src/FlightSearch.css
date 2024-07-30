@@ -1,0 +1,70 @@
+/* src/FlightSearch.css */
+
+body {
+    background-color: #000; /* Black background for the entire page */
+    margin: 0;
+    font-family: 'Google Sans', sans-serif; /* Use Google Sans font */
+  }
+  
+  .box {
+    background-color: #333; /* Dark grey background for the box */
+    color: #FF004F; /* Text color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 600px; /* Box width */
+    text-align: center; /* Center text and content inside the box */
+    position: relative; /* Position relative for internal elements */
+  }
+  
+  button {
+    background-color: #FF004F;
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded */
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to buttons */
+  }
+  
+  button:hover {
+    background-color: #e60047;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  }
+  
+  /* Plane Animation */
+  .plane-animation {
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 50px; /* Adjust height as needed */
+    pointer-events: none; /* Ensure it doesn't block other interactions */
+    z-index: 500; /* Ensure it appears above other content */
+    display: none; /* Initially hidden */
+  }
+  
+  .plane {
+    width: 50px; /* Adjust size as needed */
+    position: absolute;
+    top: 0;
+    left: -60px; /* Start position off-screen to the left */
+    animation: fly 1s linear forwards; /* Animation for flying */
+  }
+  
+  @keyframes fly {
+    0% {
+      left: -60px; /* Start off-screen */
+    }
+    100% {
+      left: 100%; /* End off-screen on the right */
+    }
+  }
+  
+  .plane-animation.visible {
+    display: block; /* Show when visible */
+  }
+  

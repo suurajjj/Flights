@@ -1,0 +1,80 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+body {
+  background-color: #000; /* Black background */
+  color: #FF004F; /* Text color */
+  margin: 0;
+  font-family: 'Google Sans', Arial, sans-serif; /* Google Sans font */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.box {
+  background-color: #333; /* Darker box background */
+  padding: 20px;
+  border-radius: 30px; /* More circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  border: none;
+  border-radius: 20px; /* Rounded corners for the input */
+  padding: 10px;
+  width: calc(100% - 22px); /* Adjust width to account for padding and border */
+  margin-bottom: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  background-color: #FF004F;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded corners for the button */
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e60047;
+}
+
+.popup {
+  background-color: #444; /* Dark background for the popup */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup input {
+  margin-bottom: 10px;
+}
